@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web bán hàng điện thoại</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div
+        class="mb-5 button-products d-flex justify-content-between align-items-center"
+        id="showProducts"
+      >
+        <div>
+          <button class="btn btn-info" data-type="All">All</button>
+          <button class="btn btn-light" data-type="Samsung">SAMSUNG</button>
+          <button class="btn btn-dark" data-type="Iphone">IPHONE</button>
+        </div>
+        <div>
+         
+          <button
+            class="btn btn-primary bg-light rounded-circle btn-card position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+            id="numProduct"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            
+          </button>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog pt-5 h-auto">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Giỏ hàng</h4>
+              <button type="button" class="close" data-bs-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" id="modalId"></div>
+            <!-- Modal footer -->
+            <div
+              class="modal-footer justify-content-between"
+              id="totalId"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="row d-flex justify-content-around align-items-center text-center flex-nowrap"
+        id="tbody-list"
+      >
+        <!-- <div class="col-sm-4">Products</div>
+        <div class="col-sm-4">Products</div>
+        <div class="col-sm-4">Products</div> -->
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./Js/apiProducts.js"></script>
+    <script src="./Js/products.js"></script>
+    <script src="./Js/main.js"></script>
+  </body>
+</html>
